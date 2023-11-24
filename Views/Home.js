@@ -1,8 +1,8 @@
 import { View, Text, StatusBar, TextInput, ScrollView, Image, TouchableOpacity, Dimensions, FlatList, SafeAreaView } from 'react-native'
 import React, { useState } from 'react';
 import { Feather, FontAwesome } from '@expo/vector-icons';
-
-
+import { useNavigation } from "@react-navigation/native";
+import GrabBike from './GrabBike';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const flatListImgCar = [
@@ -39,7 +39,7 @@ const flatListImgFood = [
   },
   {
     id: 4,
-    image: require('../assets/voucher-food4.jpg'),
+    image: require('../assets/voucher-food3.jpg'),
   },
 
 ]
@@ -81,8 +81,8 @@ const renderItemSend = ({ item, index }) => {
   )
 }
 
-export default function Home(navigate) {
-
+export default function Home() {
+  const navigation = useNavigation();
   const [dataCar, setDataCar] = useState(flatListImgCar);
   const [dataFood, setDataFood] = useState(flatListImgFood);
   const [dataSend, setDataSend] = useState(flatListImgSend);
@@ -99,7 +99,7 @@ export default function Home(navigate) {
       {/* Component Header */}
       <View style={{ height: 70, width: '100%', backgroundColor: 'green', flexDirection: 'row' }}>
         {/* Search */}
-        <View style={{ width: '70%', height: 70, marginTop: 12 }}>
+        <View style={{ width: '100%', height: 70, marginTop: 12 }}>
           <TouchableOpacity>
             <View style={{ backgroundColor: 'white', marginLeft: 10, borderRadius: 100, padding: 10, flexDirection: 'row', alignItems: 'center' }}>
               <Feather name="search" size={24} color="black" />
@@ -108,7 +108,7 @@ export default function Home(navigate) {
           </TouchableOpacity>
         </View>
         {/* User */}
-        <View style={{ width: 120, height: 120, alignItems: 'center', marginTop: 12 }}>
+        {/* <View style={{ width: 120, height: 120, alignItems: 'center', marginTop: 12 }}>
           <TouchableOpacity style={{ height: '35%', width: '40%' }}
             onPress={() => navigation.navigate('Thông Tin Tài Khoản')}
           >
@@ -116,9 +116,8 @@ export default function Home(navigate) {
               <FontAwesome name="user" size={24} color="black" />
             </View>
           </TouchableOpacity>
-        </View>
+        </View> */}
       </View>
-
       {/* Component Body */}
       <View style={{ height: '85%', width: '100%', flexDirection: 'column', backgroundColor: 'white' }}>
         <ScrollView style={{ marginHorizontal: 10 }} pagingEnabled={true} >
@@ -126,7 +125,7 @@ export default function Home(navigate) {
           <View style={{ height: 100, width: '100%', flexDirection: 'row', padding: 10, justifyContent: 'space-between' }}>
             {/* Image goride */}
             <TouchableOpacity style={{ width: '20%', height: '70%' }}
-              onPress={() => navigation.navigate('GrabBike')}
+              onPress={() => navigation.navigate("GrabBike")}
             >
               <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', padding: 5, }}>
                 <Image style={{ width: '100%', height: '100%', marginTop: 20, borderRadius: '100%' }} source={require('../assets/bikes.png')} resizeMode='contain' />
@@ -136,7 +135,7 @@ export default function Home(navigate) {
 
             {/* Image gocar */}
             <TouchableOpacity style={{ width: '20%', height: '70%' }}
-              onPress={() => navigation.navigate('Gocar')}
+              onPress={() => navigation.navigate('GrabCar')}
             >
               <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', padding: 5 }}>
                 <Image style={{ width: '100%', height: '100%', marginTop: 20, borderRadius: '100%', }} source={require('../assets/gocar.png')} resizeMode='contain' />
@@ -147,7 +146,7 @@ export default function Home(navigate) {
 
             {/* Image gofood */}
             <TouchableOpacity style={{ width: '20%', height: '70%' }}
-              onPress={() => navigation.navigate('Gofood')}
+              onPress={() => navigation.navigate('GrabFood')}
             >
               <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', padding: 5 }}>
                 <Image style={{ width: '100%', height: '100%', marginTop: 20, borderRadius: '100%' }} source={require('../assets/gofood2.png')} resizeMode='contain' />
@@ -157,7 +156,7 @@ export default function Home(navigate) {
 
             {/* Image gosend */}
             <TouchableOpacity style={{ width: '20%', height: '70%' }}
-              onPress={() => navigation.navigate('Gosend')}
+              onPress={() => navigation.navigate('GrabSend')}
             >
               <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', padding: 5 }}>
                 <Image style={{ width: '100%', height: '100%', marginTop: 20 }} source={require('../image/gosend.png')} resizeMode='contain' />

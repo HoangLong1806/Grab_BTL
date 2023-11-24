@@ -94,16 +94,16 @@ export default function App() {
     </NavigationContainer>
   );
 }
-function StackHome() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
-        <Stack.Screen name='Home' component={Home} />
-        <Stack.Screen name='GrabBkie' component={GrabBike} />
-        <Stack.Screen name="GrabCar" component={GrabCar} />
-        <Stack.Screen name="GrabFood" component={GrabFood} />
-        <Stack.Screen name="GrabSend" component={GrabSend} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  )
-}
+// function StackHome() {
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+//         <Stack.Screen name='Home' component={Home} />
+//         <Stack.Screen name='GrabBkie' component={GrabBike} />
+//         <Stack.Screen name="GrabCar" component={GrabCar} />
+//         <Stack.Screen name="GrabFood" component={GrabFood} />
+//         <Stack.Screen name="GrabSend" component={GrabSend} />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   )
+// }

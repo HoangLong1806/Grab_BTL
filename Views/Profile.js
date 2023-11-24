@@ -4,10 +4,10 @@ import { Feather, FontAwesome, FontAwesome5, AntDesign, Entypo, MaterialIcons, I
 
 const Profile = () => {
   return (
-    <View style={{ marginLeft: 20 }}>
+    <View style={{ flex: 1, marginLeft: 20 }}>
 
 
-      <ScrollView >
+      <ScrollView style={{ flex: 1, width: '100%' }}>
         <View style={{ height: 70, width: '100%', marginTop: 20, flexDirection: 'row' }}>
           <View style={{ width: 50, height: 50, backgroundColor: 'green', justifyContent: 'center', alignItems: 'center', borderRadius: 100 }}>
             <FontAwesome name="user" size={24} color="black" />
@@ -183,10 +183,15 @@ const Profile = () => {
 
 
 
-    </View>
+    </View >
   )
 }
 export default Profile
+
+
+
+
+
 // import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 // // import React from "react";
 // import React, { useState } from 'react';
