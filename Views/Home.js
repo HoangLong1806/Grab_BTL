@@ -2,7 +2,6 @@ import { View, Text, StatusBar, TextInput, ScrollView, Image, TouchableOpacity, 
 import React, { useState } from 'react';
 import { Feather, FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
-import GrabBike from './GrabBike';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const flatListImgCar = [
@@ -103,7 +102,7 @@ export default function Home() {
           <TouchableOpacity>
             <View style={{ backgroundColor: 'white', marginLeft: 10, borderRadius: 100, padding: 10, flexDirection: 'row', alignItems: 'center' }}>
               <Feather name="search" size={24} color="black" />
-              <TextInput placeholder='Tìm dịch vụ, món ngon, địa điểm' style={{ fontSize: 15, color: 'gray' }}></TextInput >
+              <TextInput placeholder='Tìm dịch vụ, món ngon, địa điểm' style={{ fontSize: 15, color: 'gray', width: 400, height: 30 }}></TextInput >
             </View>
           </TouchableOpacity>
         </View>

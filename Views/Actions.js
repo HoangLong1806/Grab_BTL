@@ -55,18 +55,6 @@ const Actions = () => {
             >
               {item.name}
             </Text>
-
-            {/* <Button
-              title="Delete"
-              onPress={() => {
-                fetch(url + "/" + item.id, {
-                  method: "DELETE",
-                }).then((result) => {
-                  console.log(result);
-                  setData(data);
-                });
-              }}
-            ></Button> */}
           </View>
         );
       })}
