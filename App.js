@@ -14,8 +14,14 @@ import GrabCar from './Views/GrabCar'
 import GrabFood from './Views/GrabFood'
 import GrabSend from './Views/GrabSend'
 const Tab = createBottomTabNavigator();
-export default function App() {
+
+
+const App = () => {
   const Stack = createNativeStackNavigator();
+  const Tab = createBottomTabNavigator();
+
+ function BootomTab() {
+ 
   return (
     <NavigationContainer>
 
@@ -94,16 +100,17 @@ export default function App() {
     </NavigationContainer>
   );
 }
-// function StackHome() {
-//   return (
-//     <NavigationContainer>
-//       <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
-//         <Stack.Screen name='Home' component={Home} />
-//         <Stack.Screen name='GrabBkie' component={GrabBike} />
-//         <Stack.Screen name="GrabCar" component={GrabCar} />
-//         <Stack.Screen name="GrabFood" component={GrabFood} />
-//         <Stack.Screen name="GrabSend" component={GrabSend} />
-//       </Stack.Navigator>
-//     </NavigationContainer>
-//   )
-// }
+  return (
+     <NavigationContainer>
+         <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+          <Stack.Screen name='Home' component={Home} />
+           <Stack.Screen name='GrabBike' component={GrabBike} />
+           <Stack.Screen name="GrabCar" component={GrabCar} />
+             <Stack.Screen name="GrabFood" component={GrabFood} />
+             <Stack.Screen name="GrabSend" component={GrabSend} />
+           </Stack.Navigator>
+         </NavigationContainer>
+       )
+
+}
+export default App;
