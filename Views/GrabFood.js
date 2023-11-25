@@ -37,7 +37,7 @@ const GrabFood = () => {
             <view style={{ backgroundColor: "#99FFCC" }}>
                 <View style={{ width: 80, height: 40 }}>
                     <Pressable onPress={() => navigation.navigate("Home")}>
-                        <AntDesign name="left" size={24} color="black" />
+                        <FontAwesome5 name="arrow-left" size={20} color={"green"} />
                     </Pressable>
                 </View>
                 <view
