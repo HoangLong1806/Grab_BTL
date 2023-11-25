@@ -182,8 +182,6 @@ const Profile = () => {
 
 
         <View style={{ width: 50, height: 70 }} />
-
-
       </ScrollView>
 
 
