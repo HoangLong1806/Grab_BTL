@@ -28,10 +28,10 @@ const GrabCar = ({ navigation }) => {
     }, []);
 
     return (
-        <View>
+        <View style={{ flex: 1, backgroundColor: '#CCFFFF' }}>
             <view style={{ backgroundColor: '#99FFCC' }}>
                 <View style={{ width: 80, height: 40, }}>
-                    <Pressable onPress={() => navigation.navigate("Home")}  ><AntDesign name="left" size={24} color="black" /></Pressable>
+                    <Pressable onPress={() => navigation.navigate("Home")}  ><FontAwesome5 name="arrow-left" size={20} color={"green"} /></Pressable>
                 </View>
                 <view style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-around' }}><Text style={{ fontWeight: '600', fontSize: '18', margin: 10 }}>{` Di chuyển 
     Chúng tối đưa bạn đến bất kỳ đâu!`}</Text>
@@ -43,7 +43,7 @@ const GrabCar = ({ navigation }) => {
 
             <view style={{ justifyContent: 'center', alignItems: 'center', marginTop: -16, alignItems: 'center', marginLeft: 45, }} >
                 <Pressable style={{ backgroundColor: 'white', width: 300, height: 30, borderRadius: 5, borderWidth: -1, justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-                    <FontAwesome5 name="map-marker" size={24} color={"black"} />
+                    <FontAwesome5 name="map-marker" size={24} color={"red"} />
                     <Text style={{ color: 'red', fontSize: '18', fontWeight: '700', marginLeft: 10 }}>Đến Đâu?</Text></Pressable>
             </view>
             <view style={{ backgroundColor: '#CCFFFF', marginTop: 30 }}>
@@ -83,7 +83,38 @@ const GrabCar = ({ navigation }) => {
                         </View>
                     );
                 })}
+
             </view>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10, marginTop: 30 }}>
+                <text style={{ fontWeight: 600, fontSize: 18 }}>Đến các địa điểm yêu thích</text>
+                <FontAwesome5 name="arrow-right" size={20} color={"green"} /></View>
+            <View >
+
+
+                <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-around', margin: 10 }}>
+                    <View style={{ width: 40, height: 40, borderRadius: 100, borderWidth: 1, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }}>
+                        <FontAwesome5 name="home" size={20} color={"green"} />
+                        {/* <text>Nhà</text> */}
+                    </View>
+                    <View style={{ width: 40, height: 40, borderRadius: 100, borderWidth: 1, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }}>
+                        <FontAwesome5 name="briefcase" size={20} color={"green"} />
+                        {/* <text>Cơ quan</text> */}
+                    </View>
+                    <View style={{ width: 40, height: 40, borderRadius: 100, borderWidth: 1, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }}>
+                        <FontAwesome5 name="plus" size={20} color={"green"} />
+                        {/* <text>Mới</text> */}
+                    </View>
+
+                </View>
+                <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-around', margin: 5 }}>
+                    <text style={{ marginLeft: 7 }}>Nhà</text>
+                    <text>Cơ quan</text>
+                    <text style={{ marginRight: 8 }}>Mới</text>
+                </View>
+
+
+
+            </View >
         </View >
     )
 }

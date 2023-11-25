@@ -10,7 +10,7 @@ const Tab = createBottomTabNavigator();
 const Pay = () => {
   return (
     <view style={{ flex: 1, }} >
-      <view><Text style={{ fontSize: '30', fontWeight: '700' }}>Thanh toán</Text></view>
+      <view style={{ textAlign: 'center' }}><Text style={{ fontSize: 30, fontWeight: '700', }}>Thanh toán</Text></view>
       <view style={{ flex: 1, }}>
         <Image style={{ width: 410, height: 200, marginLeft: 2, marginTop: 70 }} source={require('../assets/thanhtoanview.jpg')} />
       </view>

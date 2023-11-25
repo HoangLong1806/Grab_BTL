@@ -102,7 +102,7 @@ export default function Home() {
           <TouchableOpacity>
             <View style={{ backgroundColor: 'white', marginLeft: 10, borderRadius: 100, padding: 10, flexDirection: 'row', alignItems: 'center' }}>
               <Feather name="search" size={24} color="black" />
-              <TextInput placeholder='Tìm dịch vụ, món ngon, địa điểm' style={{ fontSize: 15, color: 'gray', width: 400, height: 30 }}></TextInput >
+              <TextInput placeholder='Tìm dịch vụ, món ngon, địa điểm' style={{ fontSize: 15, color: 'gray', width: 400, height: 30, borderWidth: -1 }}></TextInput >
             </View>
           </TouchableOpacity>
         </View>
@@ -127,7 +127,7 @@ export default function Home() {
               onPress={() => navigation.navigate("GrabBike")}
             >
               <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', padding: 5, }}>
-                <Image style={{ width: '100%', height: '100%', marginTop: 20, borderRadius: '100%' }} source={require('../assets/bikes.png')} resizeMode='contain' />
+                <Image style={{ width: '70%', height: '100%', marginTop: 20, borderRadius: '100%' }} source={require('../assets/bikes1.png')} resizeMode='contain' />
                 <Text style={{ fontSize: 11, fontWeight: '600' }}>Xe máy</Text>
               </View>
             </TouchableOpacity>
@@ -137,7 +137,7 @@ export default function Home() {
               onPress={() => navigation.navigate('GrabCar')}
             >
               <View style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', padding: 5 }}>
-                <Image style={{ width: '100%', height: '100%', marginTop: 20, borderRadius: '100%', }} source={require('../assets/gocar.png')} resizeMode='contain' />
+                <Image style={{ width: '80%', height: '100%', marginTop: 20, borderRadius: '100%', }} source={require('../assets/gocar.png')} resizeMode='contain' />
                 <Text style={{ fontSize: 11, fontWeight: '600' }}>Ô tô</Text>
               </View>
             </TouchableOpacity>
@@ -182,7 +182,7 @@ export default function Home() {
               </View>
             </View>
 
-            <View style={{ height: 30, width: '100%' }}>
+            <View style={{ height: 30, width: '100%', }}>
               <Text style={{ fontSize: 18, fontWeight: '500', marginTop: 5 }}>Đặt ngay, càng đặt càng lời</Text>
             </View>
 
@@ -210,8 +210,8 @@ export default function Home() {
           </View>
 
           {/* Component Gofood */}
-          <View style={{ height: 400, width: '100%' }}>
-            <View style={{ height: 40, width: '100%', flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
+          <View style={{ height: 400, width: '100%', marginTop: -80 }}>
+            <View style={{ height: 40, width: '100%', flexDirection: 'row', alignItems: 'center', marginTop: 1 }}>
               <View style={{ height: 25, width: 25, justifyContent: 'center', alignItems: 'center' }}>
                 <Image style={{ width: '100%', height: '100%' }} source={require('../image/cutlery.png')} resizeMode='stretch' />
               </View>
@@ -238,14 +238,14 @@ export default function Home() {
                 data={dataFood}
                 renderItem={renderItemFood}
                 horizontal={true}
-                style={{ marginTop: 10 }}>
+                style={{ marginTop: 1 }}>
               </FlatList>
             </View>
           </View>
 
 
           {/* Component Gosend */}
-          <View style={{ height: 450, width: '100%' }}>
+          <View style={{ height: 450, width: '100%', marginTop: -80 }}>
             <View style={{ height: 40, width: '100%', flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
               <View style={{ height: 25, width: 25, justifyContent: 'center', alignItems: 'center' }}>
                 <Image style={{ width: '100%', height: '100%' }} source={require('../image/gift-box.png')} resizeMode='stretch' />
