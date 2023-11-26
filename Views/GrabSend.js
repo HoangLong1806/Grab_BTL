@@ -1,4 +1,8 @@
 import { StyleSheet, Text, View, Image, Pressable } from "react-native";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import React from "react";
 import {
   Feather,
@@ -11,6 +15,7 @@ import {
 } from "@expo/vector-icons";
 
 const GrabSend = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <view style={{ backgroundColor: "#99FFCC" }}>
@@ -297,6 +302,8 @@ const GrabSend = () => {
         }}
       >
         <Pressable
+       
+       onPress={() => navigation.navigate("Viewgrabsend")}
           style={{
             backgroundColor: "#00CC00",
             width: 350,

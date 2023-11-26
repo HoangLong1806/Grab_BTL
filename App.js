@@ -13,6 +13,8 @@ import GrabBike from './Views/GrabBike'
 import GrabCar from './Views/GrabCar'
 import GrabFood from './Views/GrabFood'
 import GrabSend from './Views/GrabSend'
+import Viewgrabsend from "./Views/Viewgrabsend";
+import viewGrabFood from "./Views/viewGrabFood";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -101,6 +103,8 @@ function App() {
         <Stack.Screen name="GrabCar" component={GrabCar} />
         <Stack.Screen name="GrabFood" component={GrabFood} />
         <Stack.Screen name="GrabSend" component={GrabSend} />
+        <Stack.Screen name='Viewgrabsend' component={Viewgrabsend}/>
+        <Stack.Screen name='viewGrabFood' component={viewGrabFood}/>
       </Stack.Navigator>
     </NavigationContainer>
   )

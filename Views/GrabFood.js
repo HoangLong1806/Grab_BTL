@@ -8,6 +8,7 @@ import {
 } from "react-native";
 
 import React, { useEffect, useState } from "react";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import {
   Feather,
   FontAwesome,
@@ -21,6 +22,7 @@ import {
 var data = [];
 var url = "https://65419d75f0b8287df1fe8b4a.mockapi.io/bikek";
 const GrabFood = () => {
+  const navigation = useNavigation();
   var [data, setData] = useState([]);
   useEffect(() => {
     fetch(url)
@@ -156,6 +158,9 @@ const GrabFood = () => {
                       }}
                     >
                       <Pressable
+                      onPress={()=>{
+                        navigation.navigate('viewGrabFood',item)
+                      }}
                         style={{
                           backgroundColor: "#00CC00",
                           width: 70,
