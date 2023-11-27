@@ -8,20 +8,22 @@ import {
   TextInput,
   View,
 } from "react-native";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
 
-export default function viewGrabFood({route, navigation }) {
+export default function viewGrabFood({route,}) {
     const [quantity, setQuantity] = useState(1);
+    const navigation = useNavigation();
   return (
     <View>
-        <View>
-            <Image source={route.params.img} style={{ width: 272, height: 278 }} />
-        </View>
-        <View
-        style={{ width: "100%", justifyContent: "space-around", height: 280 }}
-      >
-        <Text style={{ width: "100%", fontSize: 20, fontWeight: "700" }}>
-          {route.params?.name}
-        </Text>
+        
+          <View style = {{ justifyContent: 'center', alignItems: 'center'}}>
+              <Image source={route.params.img} style={{ width: 272, height: 278 }} />
+          </View>
+          <View
+            style={{ width: "100%", justifyContent: "space-around", height: 280 }}
+          >
+         
+        
         <View
           style={{
             width: "100%",
@@ -30,6 +32,9 @@ export default function viewGrabFood({route, navigation }) {
             alignItems: "center",
           }}
         >
+           <Text style={{ width: "100%", fontSize: 20, fontWeight: "700"}}>
+                {route.params?.name}
+          </Text>
           <Text
             style={{
               fontSize: 15,
@@ -144,10 +149,22 @@ export default function viewGrabFood({route, navigation }) {
               color: "rgba(0, 0, 0, 0.67)",
             }}
           >
-            Order a Large Pizza but the size is the equivalent of a medium/small
-            from other places at the same price range.
+            ${route.params?.moTa}
           </Text>
         </View>
+      </View>
+      
+      <View style = {{flexDirection: 'column', alignItems: "center", justifyContent: 'center', marginTop: 30}}>
+            <Pressable onPress={()=>{
+                        navigation.navigate('thanhcong')
+                      }}>
+            <View style= {{marginTop: 10, flexDirection: 'row', marginRight: 10, width: 200, height: 50, borderWidth: 1, justifyContent: "center", alignItems: 'center', borderRadius: 50,backgroundColor: '#33FF00'}}>
+                <Text style = {{fontSize: 15, fontWeight: 700}}>
+                  Đặt hàng
+                </Text>
+            </View>
+            </Pressable>
+           
       </View>
       
     </View>
